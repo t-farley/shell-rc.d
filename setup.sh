@@ -82,4 +82,5 @@ if [ -f "$HOME/$RCFILE" ]; then
     fi
 fi
 
+chmod -R 755 $HOME/$DIR
 echo "source $DIR/rc" > $HOME/$RCFILE
