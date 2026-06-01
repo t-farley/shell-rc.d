@@ -1,0 +1,4 @@
+# Run every script in ~/.sh/rc.d in alphanumeric order
+for f in $HOME/.sh/rc.d/*; do
+	source $f
+done

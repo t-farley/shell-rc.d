@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+autoload -U add-zsh-hook
+
+function run_chpwd_hooks {
+	for f in $HOME/.sh/chpwd.d/*; do
+		source $f
+	done
+}
+add-zsh-hook chpwd run_chpwd_hooks
+
+run_chpwd_hooks

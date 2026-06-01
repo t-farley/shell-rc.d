@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+DIR=$HOME/Code
+DIR_REGEX=^($DIR/[^/]+)/?
+unset REPO_ROOT
+
+# If in $DIR or a subfolder
+if [[ $PWD =~ $DIR_REGEX ]]; then
+	REPO_ROOT=$match[1]
+
+	# If this is a git repo
+	if [ -d $REPO_ROOT/.git ]; then
+		export REPO_ROOT
+	fi
+fi
