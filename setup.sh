@@ -82,6 +82,4 @@ if [ -f "$HOME/$RCFILE" ]; then
     fi
 fi
 
-exit 0
-
 echo "source $DIR/rc" > $HOME/$RCFILE
