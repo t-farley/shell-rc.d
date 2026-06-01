@@ -1,4 +1,5 @@
-# Run every script in ~/.sh/rc.d in alphanumeric order
-for f in $HOME/.sh/rc.d/*; do
+# Run every script in rc.d in alphanumeric order
+DIR=$(dirname $0)
+for f in $DIR/rc.d/*; do
 	source $f
 done
