@@ -84,3 +84,5 @@ fi
 
 chmod -R 755 $HOME/$DIR
 echo "source $DIR/rc" > $HOME/$RCFILE
+
+echo "Setup Complete!"
