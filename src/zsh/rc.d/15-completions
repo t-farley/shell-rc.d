@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+COMPLETIONSPATH=$SHPATH/completions.d
+
+# Add main completions directory to FPATH
+export FPATH=$FPATH:$COMPLETIONSPATH
+
+# Add all subdirectories of completions directory to FPATH
+for DIR in $COMPLETIONSPATH/**; do
+	export FPATH=$FPATH:$DIR
+done
+
+# Initialize the zsh completion system
+autoload -Uz compinit
+compinit

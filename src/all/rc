@@ -1,5 +1,7 @@
-# Run every script in rc.d in alphanumeric order
-DIR=$(dirname $0)
-for f in $DIR/rc.d/*; do
+# Find/Export SHPATH, this is used by other scripts to find this directory.
+export SHPATH=$(dirname $0)
+
+# Run every script in $SHPATH/rc.d in alphanumeric order
+for f in $SHPATH/rc.d/*; do
 	source $f
 done

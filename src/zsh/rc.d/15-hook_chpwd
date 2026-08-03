@@ -3,7 +3,7 @@
 autoload -U add-zsh-hook
 
 function run_chpwd_hooks {
-	for f in $HOME/.sh/chpwd.d/*; do
+	for f in $SHPATH/chpwd.d/*; do
 		source $f
 	done
 }

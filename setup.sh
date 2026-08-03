@@ -58,6 +58,7 @@ if [ "$SHELL" == "-zsh" ]; then
     if [ "$SETUP_ZSH" == "Y" ]; then
         echo "Copying zsh specific files"
         cp -R src/zsh/* $HOME/$DIR
+        mkdir -p $HOME/$DIR/completions.d
     fi
 fi
 
